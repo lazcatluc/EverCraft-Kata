@@ -44,7 +44,7 @@
   <target name="dist" depends="build" description="generate the distribution" >
     <jar jarfile="${dist.dir}/hello.jar" basedir="${build.dir}">
       <manifest>
-        <attribute name="Main-Class" value="hello.Hello"/>
+        <attribute name="Main-Class" value="mmocharacter.Hello"/>
       </manifest>
     </jar>
   </target>

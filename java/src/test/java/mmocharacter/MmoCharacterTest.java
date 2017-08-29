@@ -1,4 +1,4 @@
-package hello;
+package mmocharacter;
 
 import org.junit.Test;
 
