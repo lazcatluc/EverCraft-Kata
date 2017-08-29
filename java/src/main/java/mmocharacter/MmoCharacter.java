@@ -4,8 +4,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class MmoCharacter {
+    private static final int DEFAULT_HITPOINTS = 5;
     private String name;
     private Alignment alignment;
+    private int hitPoints = DEFAULT_HITPOINTS;
 
     public void setName(String name) {
         this.name = name;
@@ -41,5 +43,13 @@ public class MmoCharacter {
 
     public Alignment getAlignment() {
         return alignment;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+
+    public int getHitPoints() {
+        return hitPoints;
     }
 }
