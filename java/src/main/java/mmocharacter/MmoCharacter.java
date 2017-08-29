@@ -5,6 +5,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public class MmoCharacter {
     private String name;
+    private Alignment alignment;
 
     public void setName(String name) {
         this.name = name;
@@ -32,5 +33,13 @@ public class MmoCharacter {
         return new HashCodeBuilder(17, 37)
                 .append(name)
                 .toHashCode();
+    }
+
+    public void setAlignment(Alignment alignment) {
+        this.alignment = alignment;
+    }
+
+    public Alignment getAlignment() {
+        return alignment;
     }
 }
