@@ -2,7 +2,7 @@
   <description>KSB's ant 'Hello, world' build.xml example</description>
 
   <property name="src.dir"   value="src/main/java"/>
-  <property name="test.src.dir"   value="src/tests/java"/>
+  <property name="test.src.dir"   value="src/test/java"/>
   <property name="build.dir" value="build"/>
   <property name="dist.dir"  value="dist"/>
   <property name="junit.dir" value="junit-results"/>

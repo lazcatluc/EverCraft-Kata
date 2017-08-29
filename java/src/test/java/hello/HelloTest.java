@@ -2,10 +2,9 @@ package hello;
 
 import org.junit.Test;
 
-
 import static org.junit.Assert.assertEquals;
 
-public class TestHello {
+public class HelloTest {
 
 	@Test
 	public void testHello() {
