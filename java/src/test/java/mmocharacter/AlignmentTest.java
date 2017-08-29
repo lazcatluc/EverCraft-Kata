@@ -7,25 +7,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AlignmentTest {
     @Test
     public void canBecomeGood() throws Exception {
-        MmoCharacter character = new MmoCharacter();
-        character.setAlignment(Alignment.GOOD);
-
-        assertThat(character.getAlignment()).isEqualTo(Alignment.GOOD);
+        assertCanBecome(Alignment.GOOD);
     }
 
     @Test
     public void canBecomeNeutral() throws Exception {
-        MmoCharacter character = new MmoCharacter();
-        character.setAlignment(Alignment.NEUTRAL);
-
-        assertThat(character.getAlignment()).isEqualTo(Alignment.NEUTRAL);
+        assertCanBecome(Alignment.NEUTRAL);
     }
 
     @Test
     public void canBecomeEvil() throws Exception {
-        MmoCharacter character = new MmoCharacter();
-        character.setAlignment(Alignment.EVIL);
+        assertCanBecome(Alignment.EVIL);
+    }
 
-        assertThat(character.getAlignment()).isEqualTo(Alignment.EVIL);
+    private void assertCanBecome(Alignment alignment) {
+        MmoCharacter character = new MmoCharacter();
+        character.setAlignment(alignment);
+
+        assertThat(character.getAlignment()).isEqualTo(alignment);
     }
 }
