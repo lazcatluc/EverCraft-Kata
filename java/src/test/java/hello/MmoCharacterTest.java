@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CharacterTest {
+public class MmoCharacterTest {
     @Test
     public void canSetName() throws Exception {
         MmoCharacter character = new MmoCharacter();
