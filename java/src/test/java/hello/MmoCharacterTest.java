@@ -12,12 +12,6 @@ public class MmoCharacterTest {
         assertThat(character.getName()).isEqualTo("me");
     }
 
-    private MmoCharacter characterWithName(String name) {
-        MmoCharacter character = new MmoCharacter();
-        character.setName(name);
-        return character;
-    }
-
     @Test
     public void iAmDifferentFromYou() throws Exception {
         MmoCharacter me = characterWithName("me");
@@ -34,5 +28,11 @@ public class MmoCharacterTest {
         MmoCharacter alsoMe = characterWithName("me");
 
         assertThat(me).isEqualTo(alsoMe);
+    }
+
+    private MmoCharacter characterWithName(String name) {
+        MmoCharacter character = new MmoCharacter();
+        character.setName(name);
+        return character;
     }
 }
