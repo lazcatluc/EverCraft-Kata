@@ -22,9 +22,7 @@ public class ArmorTest {
 
     @Test
     public void resistsAttacksWhenDamageLowerThanArmor() throws Exception {
-        MmoCharacter defender = new MmoCharacter();
-        defender.setArmor(5);
-        defender.setHitPoints(5);
+        MmoCharacter defender = dressedAliveCharacter();
 
         attack(defender, 3);
 
@@ -33,13 +31,18 @@ public class ArmorTest {
 
     @Test
     public void takesDamageWhenHitMoreThanArmorCanStand() throws Exception {
-        MmoCharacter defender = new MmoCharacter();
-        defender.setArmor(5);
-        defender.setHitPoints(5);
+        MmoCharacter defender = dressedAliveCharacter();
 
         attack(defender, 8);
 
         assertThat(defender.getHitPoints()).isEqualTo(2);
+    }
+
+    private MmoCharacter dressedAliveCharacter() {
+        MmoCharacter defender = new MmoCharacter();
+        defender.setArmor(5);
+        defender.setHitPoints(5);
+        return defender;
     }
 
     private void attack(MmoCharacter defender, int hit) {
