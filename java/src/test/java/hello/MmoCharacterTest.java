@@ -7,30 +7,31 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MmoCharacterTest {
     @Test
     public void canSetName() throws Exception {
-        MmoCharacter character = new MmoCharacter();
-        character.setName("me");
+        MmoCharacter character = characterWithName("me");
 
         assertThat(character.getName()).isEqualTo("me");
     }
 
+    private MmoCharacter characterWithName(String name) {
+        MmoCharacter character = new MmoCharacter();
+        character.setName(name);
+        return character;
+    }
+
     @Test
     public void iAmDifferentFromYou() throws Exception {
-        MmoCharacter me = new MmoCharacter();
-        me.setName("me");
+        MmoCharacter me = characterWithName("me");
 
-        MmoCharacter you = new MmoCharacter();
-        you.setName("you");
+        MmoCharacter you = characterWithName("you");
 
         assertThat(me).isNotEqualTo(you);
     }
 
     @Test
     public void iAmMe() throws Exception {
-        MmoCharacter me = new MmoCharacter();
-        me.setName("me");
+        MmoCharacter me = characterWithName("me");
 
-        MmoCharacter alsoMe = new MmoCharacter();
-        alsoMe.setName("me");
+        MmoCharacter alsoMe = characterWithName("me");
 
         assertThat(me).isEqualTo(alsoMe);
     }
